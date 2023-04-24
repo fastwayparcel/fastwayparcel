@@ -1,0 +1,18 @@
+[
+    {
+        "shipmentStageId": 1,
+        "shipmentStage": "received"
+    },
+    {
+        "shipmentStageId": 2,
+        "shipmentStage": "dispatched"
+    },
+    {
+        "shipmentStageId": 3,
+        "shipmentStage": "middle staged"
+    },
+    {
+        "shipmentStageId": 4,
+        "shipmentStage": "received"
+    }
+]

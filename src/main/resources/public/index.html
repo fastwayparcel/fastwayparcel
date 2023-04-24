@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/w3.css" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css"
+    />
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <style>
+      .swiper-pagination .swiper-pagination-bullet {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(48, 35, 224);
+      }
+    </style>
+
+    <title>Fastway Parcel - Global container liner shipping</title>
+  </head>
+  <body class="w3-white">
+    <div
+      id="menu"
+      class="w3-animate-opacity"
+      style="
+        position: fixed;
+        top: 0px;
+        height: 100vh;
+        width: 100%;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.521);
+        display: none;
+      "
+    >
+      <div class="w3-black w3-padding-16 w3-animate-left" style="width: 70%; height: 100%;">
+        <div class="w3-padding">
+          <span id="close-menu" class="material-symbols-outlined pointer">
+            close
+          </span>
+        </div>
+        <div class="w3-padding-16">
+          <div class="bold medium nav-item">
+            <div class="left-bar nav-link">
+              <a class="w3-text-white" href="/">Home</a>
+            </div>
+          </div>
+          <div class="bold medium nav-item">
+            <div class="nav-link">
+              <a class="w3-text-white" href="./services.html"
+                >Services & Information</a
+              >
+            </div>
+          </div>
+          <div class="bold medium nav-item">
+            <div class="nav-link">
+              <a class="w3-text-white" href="./our-company.html">Our Company</a>
+            </div>
+          </div>
+          <div class="bold medium nav-item">
+            <div class="nav-link">
+              <a class="w3-text-white" href="./online-business-suites.html"
+                >Online Business Suite</a
+              >
+            </div>
+          </div>
+          <div class="bold medium nav-item">
+            <div class="nav-link">
+              <a class="w3-text-white" href="./contact-us.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+        <hr style="border-color: white" />
+        <div class="w3-padding-16">
+          <div class="bold normal nav-item">
+            <div class="nav-sub-link">
+              <a class="w3-text-white" href="./quick-quotes.html"
+                >Quick Quotes</a
+              >
+            </div>
+          </div>
+          <div class="bold normal nav-item">
+            <div class="nav-sub-link">
+              <a class="w3-text-white" href="./interactive-schedule.html"
+                >Interactive Schedule</a
+              >
+            </div>
+          </div>
+          <div class="bold normal nav-item">
+            <div class="nav-sub-link">
+              <a class="w3-text-white" href="./new-booking.html">New Booking</a>
+            </div>
+          </div>
+          <div class="bold normal nav-item">
+            <div class="nav-sub-link">
+              <a class="w3-text-white" href="./my-shipments.html"
+                >My Shipments</a
+              >
+            </div>
+          </div>
+          <div class="bold normal nav-item">
+            <div class="nav-sub-link">
+              <a class="w3-text-white" href="./import.html">Import</a>
+            </div>
+          </div>
+
+          <div class="nav-link">
+            <div class="form-floating">
+              <input
+                id="tracking-id-nav"
+                type="text"
+                class="form-control shadow-none"
+                placeholder="SP2356GH"
+              />
+              <label for="tracking-id-nav" style="color: rgb(160, 160, 160)"
+                >Enter a Tracking Number</label
+              >
+            </div>
+            <label class="small w3-text-red" for="" style="display: none;">Please provide a tracking number</label>
+            <button
+              id="track-shipment-nav"
+              class="w3-button background-blue w3-round-small bold w3-margin-top"
+              style="width: 100%"
+            >
+              Track Shipment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="w3-row">
+      <div class="w3-col s2" style="height: 65px; padding-right: 10px">
+        <div
+          class="w3-black"
+          style="
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <span id="open-menu" class="material-symbols-outlined pointer">
+            menu
+          </span>
+        </div>
+      </div>
+      <div
+        class="w3-col s8"
+        style="
+          height: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p class="w3-center large">Fastway Parcel</p>
+      </div>
+      <div
+        class="w3-col s2"
+        style="
+          height: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <div class="background-blue" style="padding: 4px 8px">
+          <span class="material-symbols-outlined"> person </span>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div class="swiper swiper-1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide swiper-slide-1 slide-1">
+            <div
+              class="w3-padding-large w3-text-white"
+              style="position: absolute; bottom: 64px"
+            >
+              <p class="large no-margin">Air Freight Services</p>
+              <p class="large no-margin">Intercontinental Shipments</p>
+              <button
+                class="w3-button background-blue w3-round-small bold w3-margin-top"
+                style="width: 150px"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-1 slide-2">
+            <div
+              class="w3-padding-large w3-text-white"
+              style="position: absolute; top: 16px"
+            >
+              <p class="large no-margin">Road Freight Services</p>
+              <p class="large no-margin">Efficient Land Shipments</p>
+              <button
+                class="w3-button w3-black w3-round-small bold w3-margin-top"
+                style="width: 150px"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-1 slide-3">
+            <div
+              class="w3-padding-large w3-text-white"
+              style="position: absolute; bottom: 64px"
+            >
+              <p class="large no-margin">251 Modern Ships</p>
+              <p class="large no-margin">
+                11.8 Million TEU (Twenty-foot Equivalent Unit) transported per
+                year
+              </p>
+              <button
+                class="w3-button background-blue w3-round-small bold w3-margin-top"
+                style="width: 150px"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-1 slide-4">
+            <div
+              class="w3-padding-large w3-text-white"
+              style="position: absolute; bottom: 64px"
+            >
+              <p class="large no-margin">4,200 motivated employees</p>
+              <p class="large no-margin">
+                in more than 400 offices in 135 countries
+              </p>
+              <button
+                class="w3-button w3-black w3-round-small bold w3-margin-top"
+                style="width: 150px"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide-1 slide-5">
+            <div
+              class="w3-padding-large w3-text-white"
+              style="position: absolute; top: 16px"
+            >
+              <p class="large no-margin">
+                Fastway Parcel is a Leading Global Liner Shipping Company and a
+                Powerful Partner for you.
+              </p>
+
+              <button
+                class="w3-button background-blue w3-round-small bold w3-margin-top"
+                style="width: 150px"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination swiper-pagination-1"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
+      </div>
+      <div class="grey" style="padding: 16px">
+        <p class="w3-center w3-text-grey">Fastway Parcel</p>
+        <p class="w3-center large">We make Global Trade happen</p>
+        <div style="display: flex; justify-content: center">
+          <hr
+            style="
+              width: 10%;
+              border-color: rgb(48, 35, 224);
+              border-width: 4px;
+              margin: 12px 0px 22px;
+              opacity: 1;
+            "
+          />
+        </div>
+        <div>
+          <div class="w3-padding w3-padding-16 background-grey w3-round">
+            <div class="w3-row">
+              <div class="w3-col s1">
+                <span class="material-symbols-outlined"> map </span>
+              </div>
+              <div class="w3-col s11">
+                <p class="no-margin" style="margin-left: 4px; margin-top: 2px">
+                  Tracking
+                </p>
+              </div>
+            </div>
+            <div style="margin-top: 8px">
+              <div class="form-floating">
+                <input
+                  id="tracking-id"
+                  type="text"
+                  class="form-control shadow-none"
+                  placeholder="SP2356GH"
+                  required
+                />
+                <label for="tracking-id" style="color: rgb(160, 160, 160)"
+                  >Enter a Container-/ Booking- or B/L-Number</label
+                >
+              </div>
+              <label class="small w3-text-red" for="" style="display: none;">Please provide a tracking number</label>
+              <div style="display: flex; justify-content: end">
+                <button
+                id="track-shipment"
+                  class="w3-button background-blue w3-round-small bold w3-margin-top"
+                  style="width: 100px"
+                >
+                  Track
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w3-padding w3-padding-16 background-grey w3-round w3-margin-top"
+          >
+            <div class="w3-row">
+              <div class="w3-col s1">
+                <span class="material-symbols-outlined"> calendar_today </span>
+              </div>
+              <div class="w3-col s11">
+                <p class="no-margin" style="margin-left: 4px; margin-top: 2px">
+                  Schedules
+                </p>
+              </div>
+            </div>
+            <div class="w3-row" style="margin-top: 8px">
+              <div class="w3-col s5" style="padding-right: 4px">
+                <div class="form-floating">
+                  <input
+                    id="from"
+                    type="text"
+                    class="form-control shadow-none"
+                    placeholder=""
+                  />
+                  <label for="from" style="color: rgb(160, 160, 160)"
+                    >From</label
+                  >
+                </div>
+              </div>
+              <div class="w3-col s5" style="padding-left: 4px">
+                <div class="form-floating">
+                  <input
+                    id="to"
+                    type="text"
+                    class="form-control shadow-none"
+                    placeholder=""
+                  />
+                  <label for="to" style="color: rgb(160, 160, 160)">To</label>
+                </div>
+              </div>
+              <div class="w3-col s2 w3-center">
+                <span
+                  class="material-symbols-outlined text-blue"
+                  style="font-size: 30px; margin-top: 8px"
+                >
+                  calendar_month
+                </span>
+              </div>
+            </div>
+            <div style="display: flex; justify-content: end">
+              <button
+                class="w3-button background-blue w3-round-small bold w3-margin-top"
+                style="width: 100px"
+              >
+                Find
+              </button>
+            </div>
+          </div>
+          <div
+            class="w3-padding w3-padding-16 background-grey w3-round w3-margin-top"
+          >
+            <div class="w3-row">
+              <div class="w3-col s1">
+                <span class="material-symbols-outlined"> sell </span>
+              </div>
+              <div class="w3-col s11">
+                <p class="no-margin" style="margin-left: 4px; margin-top: 2px">
+                  Quick Quotes
+                </p>
+              </div>
+            </div>
+            <div class="w3-row" style="margin-top: 8px">
+              <div class="w3-col s8" style="padding-right: 32px">
+                <p>Your container shipping quote in 30 seconds.</p>
+              </div>
+              <div
+                class="w3-col s4"
+                style="display: flex; justify-content: end"
+              >
+                <button
+                  class="w3-button background-blue w3-round-small bold w3-margin-top"
+                >
+                  Get a Quote
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w3-black" style="padding: 32px 16px 16px">
+        <p class="w3-center" style="color: rgb(209, 209, 209)">
+          Connecting the world across oceans
+        </p>
+        <p class="w3-center large">Fastway Parcel</p>
+        <div style="display: flex; justify-content: center">
+          <hr
+            style="
+              width: 10%;
+              border-color: rgb(48, 35, 224);
+              border-width: 4px;
+              margin: 12px 0px 22px;
+              opacity: 1;
+            "
+          />
+        </div>
+        <p class="no-margin medium">
+          251 modern ships, 11.8 million TEU (Twenty-foot Equivalent Unit)
+          transported per year, 14,200 motivated employees in more than 400
+          offices in 135 countries. Hapag-Lloyd is a leading global liner
+          shipping company and a powerful partner for you.
+        </p>
+        <p class="no-margin medium">
+          Join us on the journey of an even more sustainable future of Fastway
+          Parcel!
+        </p>
+        <p class="large">Explore the World of Fastway Parcel!</p>
+        <p class="no-margin medium">
+          Our corporate film shows Fastway Parcel global shipping activities
+          emphasizing our worldwide services, high quality and environmental
+          standards as well as our historical roots.
+        </p>
+
+        <div style="padding-top: 32px">
+          <!-- Slider main container -->
+          <div class="swiper swiper-2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide-2">
+                <video
+                  width="100%"
+                  controls="controls"
+                  poster="./images/180427_Startseite_corporate_movie.JPG.jpg"
+                >
+                  >
+                  <source
+                    src="./videos/Corporate Image Video (English) Hapag-Lloyd.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="swiper-slide swiper-slide-2">Slide 2</div>
+              <div class="swiper-slide swiper-slide-2">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination swiper-pagination-2"></div> -->
+
+            <!-- If we need navigation buttons -->
+            <!-- <div class="swiper-button-prev swiper-button-prev-2"></div> -->
+            <!-- <div class="swiper-button-next swiper-button-next-2"></div> -->
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar swiper-scrollbar-2"></div>
+          </div>
+        </div>
+        <div
+          class="w3-row w3-padding-64"
+          style="
+            background-image: url(./images/plane-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.911);
+            background-blend-mode: darken;
+          "
+        >
+          <div class="w3-col l3 w3-center w3-padding-24">
+            <img src="./images/counter_icon01.png" alt="" style="width: 20%" />
+            <p class="xx-large bold w3-margin-top num" data-val="52125">
+              000+<span class="small">+</span>
+            </p>
+            <p class="text-grey bold no-margin">Delivered Packages</p>
+          </div>
+          <div class="w3-col l3 w3-center w3-padding-24">
+            <img src="./images/counter_icon02.png" alt="" style="width: 20%" />
+            <p
+              class="xx-large bold w3-margin-top text-grey num no-margin-2"
+              data-val="31786"
+            >
+              000+<span class="small">+</span>
+            </p>
+            <p class="text-grey bold no-margin">KM Per Year</p>
+          </div>
+          <div class="w3-col l3 w3-center w3-padding-24">
+            <img src="./images/counter_icon03.png" alt="" style="width: 20%" />
+            <p
+              class="xx-large bold w3-margin-top text-grey num no-margin-2"
+              data-val="26986"
+            >
+              000+<span class="small">+</span>
+            </p>
+            <p class="text-grey bold no-margin">Tons of Goods</p>
+          </div>
+          <div class="w3-col l3 w3-center w3-padding-24">
+            <img src="./images/counter_icon04.png" alt="" style="width: 20%" />
+            <p
+              class="xx-large bold w3-margin-top text-grey num no-margin-2"
+              data-val="78980"
+            >
+              000+<span class="small">+</span>
+            </p>
+            <p class="text-grey bold no-margin">Satisfied Clients</p>
+          </div>
+        </div>
+      </div>
+      <div class="grey" style="padding: 16px">
+        <p class="w3-center w3-text-grey">Testimonials</p>
+        <p class="w3-center large">
+          Here are some feedbacks from our happy customers
+        </p>
+        <div style="display: flex; justify-content: center">
+          <hr
+            style="
+              width: 10%;
+              border-color: rgb(48, 35, 224);
+              border-width: 4px;
+              margin: 12px 0px 22px;
+              opacity: 1;
+            "
+          />
+        </div>
+        <div class="swiper swiper-3">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide swiper-slide-3"></div>
+            <div class="swiper-slide swiper-slide-3">Slide 2</div>
+            <div class="swiper-slide swiper-slide-3">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <!-- <div class="swiper-pagination swiper-pagination-2"></div> -->
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev swiper-button-prev-2"></div> -->
+          <!-- <div class="swiper-button-next swiper-button-next-2"></div> -->
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar swiper-scrollbar-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="background-grey grey" style="padding: 32px 16px">
+        <div class="w3-row">
+          <div class="w3-col s6">
+            <p class="bold">Services & Information</p>
+            <p class="x-small">Offices & Local Info</p>
+            <p class="x-small">Route Finder</p>
+            <p class="x-small">Containers</p>
+            <p class="x-small">Vessels</p>
+            <p class="x-small">Operational Updates</p>
+            <p class="x-small">Contact</p>
+          </div>
+          <div class="w3-col s6">
+            <p class="bold">Online Business Suite</p>
+            <p class="x-small">Quick Quotes</p>
+            <p class="x-small">Quick Quotes Spot</p>
+            <p class="x-small">Schedule</p>
+            <p class="x-small">Booking</p>
+            <p class="x-small">Tracking</p>
+            <p class="x-small">VGM</p>
+            <p class="x-small">BL Draft Approval</p>
+            <p class="x-small">Navigator 2.0</p>
+          </div>
+        </div>
+        <div class="w3-row" style="margin-top: 24px">
+          <div class="w3-col s6">
+            <p class="bold">Career</p>
+            <p class="x-small">Working Ashore</p>
+            <p class="x-small">Working on Board</p>
+            <p class="x-small">Vacancies</p>
+            <p class="x-small">Apprenticeship</p>
+          </div>
+          <div class="w3-col s6">
+            <p class="bold">Press</p>
+            <p class="x-small">Press Releases</p>
+            <p class="x-small">Photos & Videos</p>
+          </div>
+        </div>
+
+        <hr />
+        <p class="x-small bold">Terms and Conditions:</p>
+      </div>
+    </footer>
+
+    <!-- <script
+      src="//code.tidio.co/9eyy3k6flbczmo6thdl4zr1iwzve3z7t.js"
+      async
+    ></script> -->
+    <script src="./js/menu.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+body, p, input, button {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.xx-large {
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+
+.x-large {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.large {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+.big {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.medium {
+    font-size: 16px;
+    line-height: 26px;
+}
+.normal {
+    font-size: 14px;
+}
+
+.small {
+    font-size: 12px;
+}
+.x-small {
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+

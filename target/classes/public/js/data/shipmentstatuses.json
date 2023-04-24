@@ -1,0 +1,18 @@
+[
+    {
+        "shipmentStatusId": 1,
+        "shipmentStatus": "stopped"
+    },
+    {
+        "shipmentStatusId": 2,
+        "shipmentStatus": "waiting"
+    },
+    {
+        "shipmentStatusId": 3,
+        "shipmentStatus": "moving"
+    },
+    {
+        "shipmentStatusId": 4,
+        "shipmentStatus": "delivered"
+    }
+]

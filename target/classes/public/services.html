@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/w3.css" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css"
+    />
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Services & Information - Fastway Parcel</title>
+  </head>
+  <body>
+    <div style="display: none">
+      <div
+        id="menu"
+        class="w3-animate-opacity"
+        style="
+          position: fixed;
+          top: 0px;
+          height: 100vh;
+          width: 100%;
+          z-index: 10;
+          background-color: rgba(0, 0, 0, 0.521);
+          display: none;
+        "
+      >
+        <div
+          class="w3-black w3-padding-16 w3-animate-left"
+          style="width: 70%; height: 100%"
+        >
+          <div class="w3-padding">
+            <span id="close-menu" class="material-symbols-outlined pointer">
+              close
+            </span>
+          </div>
+          <div class="w3-padding-16">
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="/">Home</a>
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="left-bar nav-link">
+                <a class="w3-text-white" href="./services.html"
+                  >Services & Information</a
+                >
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="./our-company.html"
+                  >Our Company</a
+                >
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="./online-business-suites.html"
+                  >Online Business Suite</a
+                >
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="./contact-us.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <hr style="border-color: white" />
+          <div class="w3-padding-16">
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./quick-quotes.html"
+                  >Quick Quotes</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./interactive-schedule.html"
+                  >Interactive Schedule</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./new-booking.html"
+                  >New Booking</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./my-shipments.html"
+                  >My Shipments</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./import.html">Import</a>
+              </div>
+            </div>
+
+            <div class="nav-link">
+              <div class="form-floating">
+                <input
+                  id="tracking-id-nav"
+                  type="text"
+                  class="form-control shadow-none"
+                  placeholder="SP2356GH"
+                />
+                <label for="tracking-id-nav" style="color: rgb(160, 160, 160)"
+                  >Enter a Tracking Number</label
+                >
+              </div>
+              <label class="small w3-text-red" for="" style="display: none;">Please provide a tracking number</label>
+              <button
+                id="track-shipment-nav"
+                class="w3-button background-blue w3-round-small bold w3-margin-top"
+                style="width: 100%"
+              >
+                Track Shipment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="w3-row">
+        <div class="w3-col s2" style="height: 65px; padding-right: 10px">
+          <div
+            class="w3-black"
+            style="
+              height: inherit;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <span id="open-menu" class="material-symbols-outlined pointer">
+              menu
+            </span>
+          </div>
+        </div>
+        <div
+          class="w3-col s8"
+          style="
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <p class="w3-center large">Fastway Parcel</p>
+        </div>
+        <div
+          class="w3-col s2"
+          style="
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="background-blue" style="padding: 4px 8px">
+            <span class="material-symbols-outlined"> person </span>
+          </div>
+        </div>
+      </nav>
+
+      <section>
+        <div
+          style="
+            background-image: url(./images/HLAG_Website_Seoul_Express_SanFrancisco_1320x440.jpg);
+            height: 50vh;
+            position: relative;
+          "
+        >
+          <div
+            class="w3-padding w3-text-white"
+            style="position: absolute; top: 150px"
+          >
+            <p class="xx-large no-margin" style="line-height: 45px">
+              Connecting the World across Oceans
+            </p>
+          </div>
+        </div>
+        <div class="w3-padding w3-padding-24">
+          <p class="w3-center x-large">Services & Information</p>
+          <div style="display: flex; justify-content: center">
+            <hr
+              style="
+                width: 10%;
+                border-color: rgb(48, 35, 224);
+                border-width: 4px;
+                margin: 12px 0px 22px;
+                opacity: 1;
+              "
+            />
+          </div>
+          <div class="w3-row">
+            <div class="w3-col s4">
+              <div class="w3-center">
+                <p class="text-blue bold w3-center no-margin">Vessels</p>
+                <svg class="icon-vessel" width="24" height="24">
+                  <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="#vessel"
+                    width="100%"
+                    height="100%"
+                    fill="#3023e0"
+                  >
+                    <symbol id="vessel" viewBox="0 0 24 24">
+                      <path
+                        fill="#3023e0"
+                        d="M20 13.42V8.26h-3.5l1-1.51V5.24h-11v1.5l1 1.5H4v5.16l-1 .1V15l4 6h10l4-6v-1.5zM8.5 6.74h7l-1 1.51h-5zM6 13.25V9.76h12v3.5l-6-.5z"
+                      ></path>
+                    </symbol>
+                  </use>
+                </svg>
+              </div>
+            </div>
+            <div class="w3-col s4">
+              <div class="w3-center">
+                <p class="text-blue bold w3-center no-margin">Routes</p>
+                <div class="w3-row" style="width: 50%">
+                  <div class="w3-col s6">
+                    <svg class="icon-vessel" width="24" height="24">
+                      <use
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xlink:href="#vessel"
+                        width="100%"
+                        height="100%"
+                        fill="#3023e0"
+                      >
+                        <symbol id="vessel" viewBox="0 0 24 24">
+                          <path
+                            fill="#3023e0"
+                            d="M20 13.42V8.26h-3.5l1-1.51V5.24h-11v1.5l1 1.5H4v5.16l-1 .1V15l4 6h10l4-6v-1.5zM8.5 6.74h7l-1 1.51h-5zM6 13.25V9.76h12v3.5l-6-.5z"
+                          ></path>
+                        </symbol>
+                      </use>
+                    </svg>
+                  </div>
+                  <div class="w3-col s6">
+                    <p class="big text-blue">199</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w3-col s4">
+              <div class="w3-center">
+                <p class="text-blue bold w3-center no-margin">Locations</p>
+                <svg class="icon-vessel" width="24" height="24">
+                  <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="#vessel"
+                    width="100%"
+                    height="100%"
+                    fill="#3023e0"
+                  >
+                    <symbol id="vessel" viewBox="0 0 24 24">
+                      <path
+                        fill="#3023e0"
+                        d="M20 13.42V8.26h-3.5l1-1.51V5.24h-11v1.5l1 1.5H4v5.16l-1 .1V15l4 6h10l4-6v-1.5zM8.5 6.74h7l-1 1.51h-5zM6 13.25V9.76h12v3.5l-6-.5z"
+                      ></path>
+                    </symbol>
+                  </use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

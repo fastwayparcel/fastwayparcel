@@ -1,0 +1,133 @@
+.swiper-1 {
+  width: 100%;
+  height: 50vh;
+}
+
+.swiper-2 {
+  width: 100%;
+}
+
+.swiper-3 {
+  width: 100%;
+  height: 50vh;
+}
+
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5 {
+  background-color: rgba(48, 35, 224, 0.219);
+  background-blend-mode: darken;
+  position: relative;
+}
+
+.slide-1 {
+  background-image: url(../images/plane-mobile.jpg);
+  background-size: cover;
+}
+
+.slide-2 {
+  background-image: url(../images/truck-mobile.jpg);
+  background-size: cover;
+}
+
+.slide-3 {
+  background-image: url(../images/HLAG_Stage_Vessel_Bug_23-mobile.jpg);
+  background-size: cover;
+}
+.slide-4 {
+  background-image: url(../images/HLAG_Stage_Chicago_Express_23-mobile.jpg);
+  background-size: cover;
+}
+.slide-5 {
+  background-image: url(../images/HLAG_Stage_Office_Locations_01_0452-mobile.jpg);
+  background-size: cover;
+}
+
+.grey {
+  color: rgb(44, 44, 44);
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.no-margin-2 {
+  margin: 4px 8px;
+}
+.no-margin-3 {
+  margin: 12px 0px;
+}
+
+
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+  padding: 0rem 0.75rem;
+}
+
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+  height: calc(3rem + 2px);
+  line-height: 1;
+}
+
+.form-floating > label {
+  padding: 0.8rem 0.75rem;
+  font-size: 13px;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+}
+.left-bar {
+  border-left: 5px solid #3023e0;
+}
+.nav-link {
+  padding: 12px 16px;
+}
+.nav-sub-link {
+  padding: 20px 16px;
+}
+.nav-item {
+  padding: 0px 18px;
+}
+
+.nav-item:hover {
+  /* background-color: rgb(247, 247, 247); */
+}
+
+.hr {
+  margin: 8px 0px;
+  border-color: #3023e0;
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #3023e0;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 

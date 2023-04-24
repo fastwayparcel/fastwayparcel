@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/w3.css" />
+
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css"
+    />
+    <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./css/colors.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Track Shipment - Fastway Parcel</title>
+  </head>
+  <body>
+    <div id="spinner" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+      <span class="loader"></span>
+    </div>
+    <div id="content">
+      <div
+        id="menu"
+        class="w3-animate-opacity"
+        style="
+          position: fixed;
+          top: 0px;
+          height: 100vh;
+          width: 100%;
+          z-index: 10;
+          background-color: rgba(0, 0, 0, 0.521);
+          display: none;
+        "
+      >
+        <div
+          class="w3-black w3-padding-16 w3-animate-left"
+          style="width: 70%; height: 100%"
+        >
+          <div class="w3-padding">
+            <span id="close-menu" class="material-symbols-outlined pointer">
+              close
+            </span>
+          </div>
+          <div class="w3-padding-16">
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="/">Home</a>
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="left-bar nav-link">
+                <a class="w3-text-white" href="./services.html"
+                  >Services & Information</a
+                >
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="./our-company.html"
+                  >Our Company</a
+                >
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="./online-business-suites.html"
+                  >Online Business Suite</a
+                >
+              </div>
+            </div>
+            <div class="bold medium nav-item">
+              <div class="nav-link">
+                <a class="w3-text-white" href="./contact-us.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <hr style="border-color: white" />
+          <div class="w3-padding-16">
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./quick-quotes.html"
+                  >Quick Quotes</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./interactive-schedule.html"
+                  >Interactive Schedule</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./new-booking.html"
+                  >New Booking</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./my-shipments.html"
+                  >My Shipments</a
+                >
+              </div>
+            </div>
+            <div class="bold normal nav-item">
+              <div class="nav-sub-link">
+                <a class="w3-text-white" href="./import.html">Import</a>
+              </div>
+            </div>
+
+            <div class="nav-link">
+              <div class="form-floating">
+                <input
+                  id="tracking-id-nav"
+                  type="text"
+                  class="form-control shadow-none"
+                  placeholder="SP2356GH"
+                />
+                <label for="tracking-id-nav" style="color: rgb(160, 160, 160)"
+                  >Enter a Tracking Number</label
+                >
+              </div>
+              <label class="small w3-text-red" for="" style="display: none"
+                >Please provide a tracking number</label
+              >
+              <button
+                id="track-shipment-nav"
+                class="w3-button background-blue w3-round-small bold w3-margin-top"
+                style="width: 100%"
+              >
+                Track Shipment
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="w3-row">
+        <div class="w3-col s2" style="height: 65px; padding-right: 10px">
+          <div
+            class="w3-black"
+            style="
+              height: inherit;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <span id="open-menu" class="material-symbols-outlined pointer">
+              menu
+            </span>
+          </div>
+        </div>
+        <div
+          class="w3-col s8"
+          style="
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <p class="w3-center large">Fastway Parcel</p>
+        </div>
+        <div
+          class="w3-col s2"
+          style="
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="background-blue" style="padding: 4px 8px">
+            <span class="material-symbols-outlined"> person </span>
+          </div>
+        </div>
+      </nav>
+
+      <section>
+        <div class="w3-padding-16">
+          <div
+            class="w3-row w3-padding-small w3-round"
+            style="background-color: rgb(238, 238, 238); margin: 12px 0px"
+          >
+            <div class="w3-col s9">
+              <div
+                id="print"
+                class="small background-primary w3-center w3-padding-small w3-round"
+                style="width: 60%"
+              >
+                PRINT RESULT
+              </div>
+            </div>
+            <div class="w3-col s3">
+              <div
+                id="logout"
+                class="small w3-center w3-padding-small w3-round"
+                style="background-color: rgb(255, 118, 118); color: white"
+              >
+                LOGOUT
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grey" style="padding: 16px 8px">
+          <div>
+            <p class="no-margin small text-blue bold">Detailed Result</p>
+            <hr class="hr" />
+            <p class="bold no-margin-3 medium">
+              Tracking No.: <span id="tracking-no"></span>
+            </p>
+            <p style="font-weight: 600; text-transform: uppercase">
+              <span class="small bold">Status:</span>
+              <span id="status" class="text-blue w3-animate-fading small"
+                ></span
+              >
+            </p>
+          </div>
+          <div id="invalid-shipment" style="display: none">
+            <div
+              class="card w3-padding 32 w3-margin-top w3-margin-bottom"
+              style="border-top: 3px solid #3023e0; padding: 0px 12px"
+            >
+              <p class="medium bold w3-margin-top">No Result Found</p>
+              <p class="bold">
+                Oops! we are having issues getting details of your shipment
+              </p>
+              <div class="w3-red w3-padding w3-round w3-margin-bottom">
+                <p class="no-margin">
+                  Check Your Tracking ID Number And Try Again Or Contact Us:
+                  info@fastwayparcel.com
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="shipment">
+            <div
+              class="card w3-padding-32 w3-margin-top w3-margin-bottom"
+              style="border-top: 3px solid #3023e0"
+            >
+              <div style="width: 30%">
+                <div id="received" class="order-stage 1">
+                  <p class="small no-margin-2 w3-center bold">Order Received</p>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary-light"
+                      style="
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <span
+                        class="small order-stage-icon bold notranslate"
+                        style="display: block"
+                        >1</span
+                      >
+                      <span
+                        class="material-symbols-outlined notranslate"
+                        style="font-size: 22px; display: none"
+                      >
+                        check
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary order-stage-icon bold 2"
+                      style="height: 20px; width: 1px"
+                    ></div>
+                  </div>
+                </div>
+                <div id="dispatched" class="order-stage">
+                  <p class="small no-margin-2 w3-center bold">Dispatched</p>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary-light"
+                      style="
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <span class="small order-stage-icon bold notranslate"
+                        >2</span
+                      >
+                      <span
+                        class="material-symbols-outlined notranslate"
+                        style="font-size: 22px; display: none"
+                      >
+                        check
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary"
+                      style="height: 20px; width: 1px"
+                    ></div>
+                  </div>
+                </div>
+                <div id="middle" class="order-stage">
+                  <p class="small no-margin-2 w3-center bold">Middle stage</p>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary-light"
+                      style="
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <span class="small order-stage-icon bold notranslate"
+                        >3</span
+                      >
+                      <span
+                        class="material-symbols-outlined notranslate"
+                        style="font-size: 22px; display: none"
+                      >
+                        check
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary"
+                      style="height: 20px; width: 1px"
+                    ></div>
+                  </div>
+                </div>
+                <div id="delivered" class="order-stage 4">
+                  <p class="small no-margin-2 w3-center bold">Delivered</p>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="background-primary-light"
+                      style="
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      "
+                    >
+                      <span class="small order-stage-icon bold notranslate"
+                        >4</span
+                      >
+                      <span
+                        class="material-symbols-outlined notranslate"
+                        style="font-size: 22px; display: none"
+                      >
+                        check
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="small" style="margin-top: 32px; padding: 0px 12px">
+                <div class="w3-border-bottom w3-margin-top">
+                  <p class="no-margin-3 bold">
+                    Depature:
+                    <span id="depature" class="text-blue"></span>
+                  </p>
+                </div>
+                <div class="w3-border-bottom w3-margin-top">
+                  <p class="no-margin-3 bold">
+                    Shipment Date/Time:
+                    <span id="shipment-date" class="text-blue"></span>
+                  </p>
+                </div>
+                <div class="w3-border-bottom w3-margin-top">
+                  <p class="no-margin-3 bold">
+                    Expected arrival Date/Time:
+                    <span id="arrival-date" class="text-blue"></span>
+                  </p>
+                </div>
+                <div>
+                  <div class="w3-border-bottom w3-margin-top">
+                    <p class="no-margin-3 bold w3-text-red">Sender Details</p>
+                  </div>
+                  <p class="bold no-margin-3">
+                    Fullname:
+                    <span id="sender-name" class="text-blue"></span>
+                  </p>
+                  <p class="bold no-margin-3">
+                    Address:
+                    <span id="sender-address" class="text-blue"></span>
+                  </p>
+                  <p class="bold no-margin-3">
+                    Destination:
+                    <span id="shipment-destination" class="text-blue"></span>
+                  </p>
+                  <p
+                    id="sender-phone-number-container"
+                    class="bold no-margin-3"
+                  >
+                    Phone:
+                    <span id="sender-phone-number" class="text-blue"></span>
+                  </p>
+                  <p id="sender-email-container" class="bold no-margin-3">
+                    Email:
+                    <span id="sender-email" class="text-blue"></span>
+                  </p>
+                </div>
+
+                <div>
+                  <div class="w3-border-bottom w3-margin-top">
+                    <p class="no-margin-3 bold w3-text-red">Receiver Details</p>
+                  </div>
+                  <p class="bold no-margin-3">
+                    Fullname:
+                    <span id="receiver-name" class="text-blue"></span>
+                  </p>
+                  <p class="bold no-margin-3">
+                    Address:
+                    <span id="receiver-address" class="text-blue"></span>
+                  </p>
+                  <p class="bold no-margin-3">
+                    Phone:
+                    <span id="receiver-phone-number" class="text-blue"></span>
+                  </p>
+                  <p class="bold no-margin-3">
+                    Email:
+                    <span id="receiver-email" class="text-blue"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card w3-margin-top w3-padding-16">
+              <div style="border-bottom: 1px solid rgba(14, 27, 143, 0.075)">
+                <p class="bold no-margin w3-padding-small text-blue">
+                  Shipment Facts
+                </p>
+              </div>
+              <div>
+                <p id="mode" class="bold w3-center text-blue"></p>
+              </div>
+              <div class="small" style="padding: 0px 12px">
+                <p class="no-margin-3 bold">
+                  Package: <span id="package" class="text-blue"></span>
+                </p>
+                <p class="no-margin-3 bold">
+                  Reference Code:
+                  <span id="reference-code" class="text-blue"></span>
+                </p>
+                <p class="no-margin-3 bold">
+                  Weight: <span id="weight" class="text-blue"></span>
+                </p>
+                <p class="no-margin-3 bold">
+                  Service Type:
+                  <span id="service-type" class="text-blue"></span>
+                </p>
+              </div>
+            </div>
+            <div class="card w3-margin-top w3-padding-16">
+              <div style="border-bottom: 1px solid rgba(14, 27, 143, 0.096)">
+                <p class="bold no-margin w3-padding-small text-blue">
+                  Shipment History
+                </p>
+              </div>
+              <div class="small w3-margin-top">
+                <div class="w3-row">
+                  <div
+                    class="w3-col s3 background-primary"
+                    style="
+                      border-right: 1px solid rgb(245, 245, 245);
+                      padding-left: 4px;
+                    "
+                  >
+                    <p class="no-margin-2">Date</p>
+                  </div>
+                  <div
+                    class="w3-col s3 background-primary"
+                    style="
+                      border-right: 1px solid rgb(245, 245, 245);
+                      padding-left: 4px;
+                    "
+                  >
+                    <p class="no-margin-2">Time</p>
+                  </div>
+                  <div
+                    class="w3-col s3 background-primary"
+                    style="
+                      border-right: 1px solid rgb(245, 245, 245);
+                      padding-left: 4px;
+                    "
+                  >
+                    <p class="no-margin-2">Location</p>
+                  </div>
+                  <div
+                    class="w3-col s3 background-primary"
+                    style="
+                      border-right: 1px solid rgb(245, 245, 245);
+                      padding-left: 4px;
+                    "
+                  >
+                    <p class="no-margin-2">Activity</p>
+                  </div>
+                </div>
+                <div id="histories-root"></div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/tracker.js"></script>
+  </body>
+</html>
