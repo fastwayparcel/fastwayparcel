@@ -114,6 +114,7 @@ const swiper2 = new Swiper(".swiper-2", {
   speed: 3000,
   loop: true,
 
+
   // If we need pagination
   pagination: {
     el: ".swiper-pagination-2",
@@ -129,13 +130,13 @@ const swiper2 = new Swiper(".swiper-2", {
 const swiper3 = new Swiper(".swiper-3", {
   // Optional parameters
   direction: "horizontal",
-  speed: 3000,
+  speed: 500,
   loop: true,
 
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true,
+  autoplay: {
+    delay: 2000,
   },
+
 
   // If we need pagination
   pagination: {

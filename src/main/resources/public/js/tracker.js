@@ -29,7 +29,7 @@ function getShipment(shipmentId) {
         }
         shipment = response;
         if (response.shipmentStatus.shipmentStatus == "stopped") {
-          document.getElementById("status").classList.add("w3-text-red")
+          document.getElementById("status").classList.add("w3-text-red");
         }
 
         document.getElementById("sender-phone-number").textContent =
@@ -165,13 +165,17 @@ function changeStage(selectedStage) {
     if (orderStages[i].id == selectedStage.id) {
       orderStages[i].children[1].children[0].children[1].textContent =
         "local_shipping";
-        if (shipment.shipmentStatus.shipmentStatus == "stopped") {
-          orderStages[i].children[1].children[0].classList.replace(
-            "background-primary",
-            "w3-red"
-          );
-          orderStages[i].children[1].children[0].classList.add("w3-animate-fading")
-        }
+      if (shipment.shipmentStatus.shipmentStatus == "stopped") {
+        orderStages[i].children[1].children[0].classList.replace(
+          "background-primary",
+          "w3-red"
+        );
+        orderStages[i].children[1].children[0].classList.add(
+          "w3-animate-fading"
+        );
+      } else if (shipment.shipmentStatus.shipmentStatus == "delivered") {
+        document.getElementById("status").classList.remove("w3-animate-fading");
+      }
       break;
     }
   }
